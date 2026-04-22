@@ -1,27 +1,26 @@
 import type {Metadata} from 'next';
-import {Inter, Manrope} from 'next/font/google';
+import { Manrope, Inter } from 'next/font/google';
 import './globals.css';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
 
 const manrope = Manrope({
   subsets: ['latin'],
-  variable: '--font-headline',
+  variable: '--font-manrope',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
-  title: 'Sanctuary Health',
-  description: 'Refined digital check-in and patient onboarding.',
+  title: 'ClinicFlow | Patient Check-in',
+  description: 'Self-service kiosk for quick patient check-in',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
-      <body className="font-sans text-on-surface bg-background min-h-screen antialiased" suppressHydrationWarning>
-        <div className="noise-overlay" />
+    <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
+      <body suppressHydrationWarning className="antialiased min-h-screen bg-[#fcf8ff] text-[#1b1b24] font-inter">
         {children}
       </body>
     </html>

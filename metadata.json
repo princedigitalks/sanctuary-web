@@ -1,6 +1,6 @@
 {
-  "name": "Sanctuary Health",
-  "description": "A refined digital check-in and patient onboarding experience for Sanctuary Health.",
+  "name": "ClinicFlow",
+  "description": "Patient Self Check-in Kiosk System",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }
